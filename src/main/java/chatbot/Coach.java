@@ -183,17 +183,6 @@ public class Coach {
         printLine();
     }
 
-    private static void handleDelete(String[] inputs) throws CoachException {
-        printLine();
-        int deleteIndex = parseTaskIndex(inputs, "delete");
-
-        Task removedTask = tasks.remove(deleteIndex);
-
-        System.out.println("Noted. I've removed this task:");
-        System.out.println("  " + removedTask);
-        System.out.println("Now you have " + tasks.size() + " tasks in the list.");
-        printLine();
-    }
 
     private static int parseTaskIndex(String[] inputs, String actionName) throws CoachException {
         if (inputs.length < 2) {
